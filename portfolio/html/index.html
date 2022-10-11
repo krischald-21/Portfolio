@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Krischal</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+      integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+      crossorigin=""
+    ></script>
+    <style>
+      .theme {
+        transform: translateX(600%);
+        transition: transform 1s;
+      }
+
+      header.shrink .theme {
+        transform: translateX(0);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <img src="../bg-pic.jpg" alt="background" class="bg-pic" />
+      <a href="#" class="logo">Krischal</a>
+      <i class="fa-solid fa-bars nav-icon"></i>
+      <nav>
+        <a href="">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="../Krischal_Dhungel_Resume.pdf" download="">Resume</a>
+      </nav>
+      <div class="col-theme">
+        <i class="fa-solid fa-moon theme" id="light"></i>
+        <i
+          class="fa-solid fa-sun theme"
+          style="opacity: 0; color: white"
+          id="dark"
+        ></i>
+      </div>
+    </header>
+
+    <main>
+      <div class="nodes">
+        <div class="circle1" style="top: 16rem"></div>
+        <div class="circle2" style="top: 19.5rem"></div>
+        <div class="circle3" style="top: 22.6rem"></div>
+        <div class="circle4" style="top: 25.8rem"></div>
+        <div class="circle5" style="top: 29rem"></div>
+        <div class="circle6" style="top: 32rem"></div>
+        <div class="circle7" style="top: 35.5rem"></div>
+        <div class="circle8" style="top: 38.5rem"></div>
+      </div>
+      <div class="tech-skills">
+        <div class="left">
+          <h1>HTML</h1>
+          <h1></h1>
+          <h1>JavaScript</h1>
+          <h1></h1>
+          <h1>Python</h1>
+          <h1></h1>
+          <h1>SQL</h1>
+          <h1></h1>
+        </div>
+        <div class="right">
+          <h1></h1>
+          <h1>CSS</h1>
+          <h1></h1>
+          <h1>Java</h1>
+          <h1></h1>
+          <h1>C#</h1>
+          <h1></h1>
+          <h1>Bash Scripting</h1>
+        </div>
+      </div>
+    </main>
+
+    <div class="map-box">
+      <div class="map" id="map"></div>
+    </div>
+
+    <footer>
+      <div class="top">Krischal Dhungel 2022 <sup>&copy;</sup></div>
+      <div class="bottom">
+        <a href="https://www.linkedin.com/in/krischal-dhungel-742306202/">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/krischald-21">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/kris.dhungel/">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </footer>
+    <script src="../javascript/script.js"></script>
+    <script>
+      window.addEventListener("scroll", () => {
+        head.classList.toggle("shrink", window.scrollY > 0);
+        body.classList.toggle("dots", window.scrollY > 5);
+      });
+    </script>
+    <script>
+      let map = L.map("map").setView([27.69814, 85.332043], 16);
+      L.tileLayer(
+        "https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=zbSfd7jbMW2qTmXLGVIM",
+        {
+          attribution:
+            '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+        }
+      ).addTo(map);
+
+      let marker = L.marker([27.69814, 85.332043]).addTo(map);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="shrink">
+      <img src="../bg-pic.jpg" alt="background" class="bg-pic" />
+      <a href="index.html" class="logo">Krischal</a>
+      <i class="fa-solid fa-bars nav-icon"></i>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="../Krischal_Dhungel_Resume.pdf" download="">Resume</a>
+      </nav>
+      <div class="col-theme">
+        <i class="fa-solid fa-moon theme" id="light"></i>
+        <i
+          class="fa-solid fa-sun theme"
+          style="opacity: 0; color: white"
+          id="dark"
+        ></i>
+      </div>
+    </header>
+
+    <div class="form-cont">
+      <form onsubmit="saveDetails(); reset(); return false;">
+        <h1>Contact Me</h1>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter Name"
+          required
+        />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter Email ID"
+          required
+        />
+        <input
+          type="text"
+          id="phone"
+          name="phone"
+          placeholder="Enter Phone No."
+        />
+        <textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+          placeholder="Enter your message..."
+        ></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    <script src="../javascript/script.js"></script>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <!-- <script type="text/javascript">
+      const head = document.querySelector("header");
+      const body = document.querySelector("body");
+      const nav = document.querySelector(".nav-icon");
+      nav.addEventListener("click", () => {
+        head.classList.toggle("nav-bar");
+        body.classList.toggle("push-down");
+      });
+    </script> -->
+  </body>
+</html>
