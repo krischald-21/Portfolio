@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { Download } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
@@ -38,6 +39,13 @@ export default function Home() {
                             className="px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition"
                         >
                             View Projects
+                        </a>
+                        <a
+                            href="/assets/Krischal_Dhungel_Resume.pdf"
+                            download
+                            className="flex justify-around gap-2 px-6 py-2 border border-gray-400 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+                        >
+                            <Download size={20} className="shrink-0" /> <span>Resume</span>
                         </a>
                         <a
                             href="/about"

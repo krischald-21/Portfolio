@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { Anchor, Github, Link2, LinkIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -53,17 +54,17 @@ export default function Projects() {
                         <div className="flex gap-4">
                             <Link
                                 href={project.liveUrl}
-                                className="text-blue-500 hover:underline"
+                                className="text-blue-500 hover:underline p-1"
                                 target="_blank"
                             >
-                                Live Demo
+                                <LinkIcon size={20} />
                             </Link>
                             <Link
                                 href={project.github}
-                                className="text-gray-500 hover:underline"
+                                className="text-gray-500 hover:underline rounded-full bg-white p-1"
                                 target="_blank"
                             >
-                                GitHub
+                                <Github size={20} />
                             </Link>
                         </div>
                     </motion.div>
