@@ -1,10 +1,11 @@
 "use client";
-import { Home, User, Code, Mail } from "lucide-react";
+import { Home, User, Code, Mail, GraduationCap } from "lucide-react";
 import useActiveSection from "@/hooks/useActiveSection";
 
 const sections = [
     { href: "#hero", icon: Home, id: "hero", label: "Home" },
     { href: "#about", icon: User, id: "about", label: "About" },
+    { href: "#education", icon: GraduationCap, id: "education", label: "Education" },
     { href: "#projects", icon: Code, id: "projects", label: "Projects" },
     { href: "#contact", icon: Mail, id: "contact", label: "Contact" },
 ];
@@ -23,8 +24,8 @@ export default function Sidebar() {
                         key={index}
                         href={section.href}
                         className={`transition ${isActive
-                                ? "text-blue-500 scale-110"
-                                : "text-gray-300 hover:text-blue-400"
+                            ? "text-blue-500 scale-110"
+                            : "text-gray-300 hover:text-blue-400"
                             }`}
                         aria-label={section.label}
                     >
