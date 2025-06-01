@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧑‍💻 Krischal Dhungel – Personal Portfolio
 
-## Getting Started
+Welcome to my personal developer portfolio, built to showcase my skills, experience, and creative work in software engineering and artificial intelligence. The site is lightweight, fast, and responsive — with custom animations, smooth scroll, and a clean layout inspired by [david-hckh.com](https://david-hckh.com) and [needle.tools](https://needle.tools).
 
-First, run the development server:
+> 🚀 Live Demo: [portfolio-sepia-five-40.vercel.app](https://portfolio-sepia-five-40.vercel.app)
+
+---
+
+## 🧱 Tech Stack
+
+- **Framework:** [Next.js 14](https://nextjs.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Animation:** [Framer Motion](https://www.framer.com/motion/)
+- **Icons:** [Lucide Icons](https://lucide.dev/)
+- **Deployment:** [Vercel](https://vercel.com/)
+
+---
+
+## 📁 Features
+
+- ✨ Minimal and modern design
+- 🎯 Smooth scroll and scroll-spy navigation
+- 🧠 In-view animations using Framer Motion
+- 📚 Timeline-style Education section
+- 🖼️ Custom 2D hero illustration with transparent background
+- 📂 Projects showcase (JumpNations and more)
+- 📄 Downloadable resume (PDF)
+- 📬 Contact section with social links
+
+---
+
+## 📸 Sections Breakdown
+
+- **Hero**: Introduction, animated headline, and quick links
+- **About**: Short bio with an optional image and resume download
+- **Projects**: Highlights of impactful professional and personal work
+- **Education**: Responsive vertical timeline of academic history
+- **Contact**: Email, LinkedIn, GitHub, and Resume links
+- **Sidebar Nav**: Vertical fixed navigation with scroll-spy highlight
+
+---
+
+## 📦 Setup & Local Development
 
 ```bash
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
