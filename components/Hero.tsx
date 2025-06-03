@@ -43,7 +43,7 @@ export default function Home() {
                                 View Projects
                             </a>
                             <a
-                                href="/assets/Krischal_Dhungel_Resume.pdf"
+                                href="https://drive.google.com/uc?export=download&id=1d1xJJ_2RSkZcbpDicTzq9meKS2n6rcG8"
                                 download
                                 className="flex justify-around gap-2 px-6 py-2 border border-gray-400 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition"
                             >
