@@ -21,7 +21,7 @@ export default function About() {
                             alt="Developer illustration"
                             width={500}
                             height={500}
-                            className="rounded-xl w-full max-w-sm md:max-w-md"
+                            className="rounded-sm w-full max-w-sm md:max-w-md"
                             priority
                         />
                     </motion.div>

@@ -88,7 +88,7 @@ export default function Experience() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.75, delay: index * 0.2 }}
                                 onClick={() => toggleIndex(index)}
-                                className={`group min-h-[25rem] max-h-[25rem]  hover:bg-gray-100 hover:dark:bg-gray-900 rounded-xs flex gap-10 p-3 items-center duration-500 transition-all ease-in-out ${isActive ? "w-[48rem] bg-gray-100 dark:bg-gray-900 px-6 cursor-default" : "w-20 cursor-pointer dark:bg-gray-600 bg-gray-200"
+                                className={`group min-h-[25rem] max-h-[25rem] shadow-md hover:bg-gray-100 hover:dark:bg-gray-900 rounded-xs flex gap-10 p-3 items-center duration-500 transition-all ease-in-out ${isActive ? "w-[48rem] bg-gray-100 dark:bg-gray-900 px-6 cursor-default" : "w-20 cursor-pointer dark:bg-gray-600 bg-gray-200"
                                     }`}
                             >
                                 {/* Image + Title Block */}
