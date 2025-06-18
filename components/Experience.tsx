@@ -88,6 +88,7 @@ export default function Experience() {
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
                                 transition={{ duration: 0.75, delay: index * 0.2 }}
                                 onClick={() => toggleIndex(index)}
                                 title={showTooltip <= 1 ? isActive ? "Click to collapse" : "Click to expand" : ""}
