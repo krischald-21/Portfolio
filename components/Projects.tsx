@@ -10,6 +10,7 @@ const projects = [
         title: "Crypto Market Tracker",
         description: "A responsive dashboard for that showcases real-time crypto prices and crypto news built with Vite, React, and Tailwind CSS. Includes search and dynamic routing.",
         image: "/assets/crypto_icon.png",
+        needBg: true,
         liveUrl: "https://vite-crypto-app.netlify.app",
         github: "https://github.com/krischald-21/cryptoverse",
     },
@@ -17,6 +18,7 @@ const projects = [
         title: "Jumpnations",
         description: "India based school-student-sport management systems that tracks the sports progress of the students in Indian Schools using .NET Framework, jQuery and Azure DevOps.",
         image: "/assets/jn.png",
+        needBg: true,
         liveUrl: "https://jumpnations.azurewebsites.net",
         github: "",
     },
@@ -25,12 +27,12 @@ const projects = [
 export default function Projects() {
     return (
         <AnimatedSection>
-            <main className="min-h-screen px-6 py-24 max-w-7xl mx-auto">
+            <main className="min-h-screen px-6 py-24 max-w-4xl mx-auto">
                 <motion.h1
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="text-4xl font-semibold mb-12"
+                    className="text-4xl font-semibold mb-12 text-center"
                 >
                     Projects
                 </motion.h1>
@@ -49,7 +51,7 @@ export default function Projects() {
                                 alt={project.title}
                                 width={300}
                                 height={300}
-                                className="rounded-md mb-4 object-contain w-full h-48"
+                                className={`rounded-md py-1 mb-4 object-contain w-full h-48 ${project.needBg ? "bg-gray-900 dark:bg-transparent" : ""}`}
                             />
                             <h2 className="text-2xl font-semibold mb-2">{project.title}</h2>
                             <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>

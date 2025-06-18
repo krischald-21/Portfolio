@@ -60,9 +60,11 @@ const experience = [
 
 export default function Experience() {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
+    const [showTooltip, setShowTooltip] = useState<number>(0);
 
     const toggleIndex = (index: number) => {
         setActiveIndex(prev => (prev === index ? null : index));
+        setShowTooltip(prev => prev + 1)
     };
 
     return (
@@ -72,7 +74,7 @@ export default function Experience() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="text-4xl font-semibold mb-12"
+                    className="text-4xl font-semibold mb-12 text-center"
                 >
                     Experience
                 </motion.h1>
@@ -88,6 +90,7 @@ export default function Experience() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.75, delay: index * 0.2 }}
                                 onClick={() => toggleIndex(index)}
+                                title={showTooltip <= 1 ? isActive ? "Click to collapse" : "Click to expand" : ""}
                                 className={`group min-h-[25rem] max-h-[25rem] shadow-md hover:bg-gray-100 hover:dark:bg-gray-900 rounded-xs flex gap-10 p-3 items-center duration-500 transition-all ease-in-out ${isActive ? "w-[48rem] bg-gray-100 dark:bg-gray-900 px-6 cursor-default" : "w-20 cursor-pointer dark:bg-gray-600 bg-gray-200"
                                     }`}
                             >

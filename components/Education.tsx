@@ -9,6 +9,7 @@ export default function Education() {
             degree: "M.S. in Computer Science",
             year: "2024 – 2026",
             image: "/assets/wsu.png",
+            needBg: false,
             location: "Ohio, USA",
         },
         {
@@ -16,6 +17,7 @@ export default function Education() {
             degree: "B.Sc. (Hons) in Computing",
             year: "2021 – 2023",
             image: "/assets/lmu.png",
+            needBg: true,
             location: "Kathmandu, Nepal",
         },
     ];
@@ -35,6 +37,7 @@ export default function Education() {
                                     alt={item.school}
                                     height={150}
                                     width={150}
+                                    className={item.needBg ? "bg-gray-900 dark:bg-transparent" : ""}
                                 />
 
                             </div>
