@@ -13,11 +13,7 @@ const experience = [
         company: "Kathmandu Codes",
         location: "Kathmandu, Nepal",
         description: [
-            "Led development of a full-stack student-sport-school platform adopted by 2 pilot schools in India, streamlining sports tracking and student progression for 1,000+ users using .NET, jQuery, and SQL Server",
-            "Improved application performance by 20% and reduced feature delivery time by 2–3x by optimizing SQL queries and automating deployments via Azure DevOps CI/CD pipeline",
-            "Automated bulk data import, grade promotion, and score entry modules—cutting manual admin effort by 80% and saving 20+ staff-hours per month",
-            "Mentored a junior developer who later independently shipped two production features, improving their velocity and code quality over 4 months",
-            "Resolved high-priority production bugs within 24–48 hours and consistently shipped client-driven features each sprint, improving satisfaction and delivery confidence"
+            "Led the development of a full-stack student-sport-school platform used by 1,000+ users across pilot schools in India, streamlining sports tracking and academic progression. Optimized performance, automated key admin tasks, and implemented CI/CD pipelines, reducing manual effort by 80% and accelerating feature delivery by up to 3×. Also mentored a junior developer and ensured rapid resolution of high-priority production issues."
         ],
         start: "May 2023",
         end: "August 2024",
@@ -29,10 +25,7 @@ const experience = [
         company: "Kathmandu Codes",
         location: "Kathmandu, Nepal",
         description: [
-            "Delivered a full-stack community dashboard for TearFund Nepal within 4 months, enabling the NGO to visualize post-earthquake development efforts across 50+ rural communities",
-            "Built and deployed REST APIs using .NET Framework, dynamic ReactJS frontend components, and complex SQL queries to provide real-time insights across sectors like Disaster Risk Reduction (DRR) and health",
-            "Led a critical sprint as scrum master, achieving 200% of sprint goals in just 3 days by coordinating task breakdown, team velocity tracking, and daily standups",
-            "Integrated LeafletJS maps to visualize live geographic data across 100+ project sites; deployed via CI/CD pipelines using Azure DevOps and GitHub for agile collaboration"
+            "Delivered a full-stack community dashboard for TearFund Nepal in just 4 months, enabling real-time visualization of development efforts across 50+ rural communities. Built REST APIs, dynamic ReactJS components, and integrated geographic data using LeafletJS maps. Also led a high-impact sprint as scrum master, achieving 200% of sprint goals while ensuring smooth CI/CD deployment via Azure DevOps and GitHub."
         ],
         start: "September 2022",
         end: "January 2023",
@@ -44,8 +37,7 @@ const experience = [
         company: "MySecondTeacher",
         location: "Kathmandu, Nepal",
         description: [
-            "Annotated 50+ video lessons to contain pop-up quizzes and report generation on an integrated video platform",
-            "Tested 100+ testpapers, e-books and question banks to ensure the highest quality of content"
+            "Enhanced an interactive video learning platform by annotating 50+ lessons with embedded quizzes and automated reporting features. Ensured high content quality by testing over 100 test papers, e-books, and question banks for accuracy and consistency."
         ],
         start: "June 2022",
         end: "September 2022",
@@ -75,7 +67,7 @@ export default function Experience() {
 
     return (
         <AnimatedSection>
-            <main className="min-h-screen px-6 py-24 max-w-7xl mx-auto">
+            <main className="min-h-screen px-6 py-24 max-w-7xl mx-auto text-gray-800 dark:text-gray-100">
                 <motion.h1
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -96,7 +88,7 @@ export default function Experience() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.75, delay: index * 0.2 }}
                                 onClick={() => toggleIndex(index)}
-                                className={`group min-h-[25rem] max-h-[25rem] bg-gray-600 rounded-xs flex gap-10 p-3 items-center duration-500 transition-all ease-in-out ${isActive ? "w-[48rem] px-6 cursor-default" : "w-20 cursor-pointer"
+                                className={`group min-h-[25rem] max-h-[25rem]  hover:bg-gray-100 hover:dark:bg-gray-900 rounded-xs flex gap-10 p-3 items-center duration-500 transition-all ease-in-out ${isActive ? "w-[48rem] bg-gray-100 dark:bg-gray-900 px-6 cursor-default" : "w-20 cursor-pointer dark:bg-gray-600 bg-gray-200"
                                     }`}
                             >
                                 {/* Image + Title Block */}
@@ -119,22 +111,22 @@ export default function Experience() {
 
                                 {/* Expanded Content */}
                                 {isActive && (
-                                    <div className="flex flex-3/4 flex-col justify-start gap-3 text-white max-w-xl">
+                                    <div className="flex flex-3/4 flex-col justify-start gap-3 dark:text-white max-w-xl">
                                         <div>
                                             <h1 className="text-2xl font-bold">{exp.title}</h1>
-                                            <p className="text-sm text-gray-300">{exp.start} - {exp.end}</p>
+                                            <p className="text-sm dark:text-gray-300 text-gray-600">{exp.start} - {exp.end}</p>
                                         </div>
-                                        <ul className="list-disc ml-5 space-y-1 text-sm">
+                                        <div className=" text-sm">
                                             {exp.description.map((des, id) => (
-                                                <li key={id}>{des}</li>
+                                                <p key={id}>{des}</p>
                                             ))}
-                                        </ul>
+                                        </div>
                                         <div className="mt-2">
                                             <a
                                                 href={exp.url}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-blue-300 hover:underline flex items-center gap-1"
+                                                className="text-blue-600 dark:text-blue-300 hover:underline flex items-center gap-1"
                                             >
                                                 <LinkIcon size={18} /> Visit Company
                                             </a>
