@@ -18,7 +18,7 @@ const projects = [
         description: "India based school-student-sport management systems that tracks the sports progress of the students in Indian Schools using .NET Framework, jQuery and Azure DevOps.",
         image: "/assets/jn.png",
         liveUrl: "https://jumpnations.azurewebsites.net",
-        github: "#",
+        github: "",
     },
 ];
 
@@ -54,20 +54,25 @@ export default function Projects() {
                             <h2 className="text-2xl font-semibold mb-2">{project.title}</h2>
                             <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
                             <div className="flex gap-4">
-                                <Link
-                                    href={project.liveUrl}
-                                    className="text-blue-500 hover:underline p-1"
-                                    target="_blank"
-                                >
-                                    <LinkIcon size={20} />
-                                </Link>
-                                <Link
-                                    href={project.github}
-                                    className="text-gray-500 hover:underline rounded-full bg-white p-1"
-                                    target="_blank"
-                                >
-                                    <Github size={20} />
-                                </Link>
+                                {project.liveUrl && (
+                                    <Link
+                                        href={project.liveUrl}
+                                        className="text-blue-500 hover:underline p-1"
+                                        target="_blank"
+                                    >
+                                        <LinkIcon size={20} />
+                                    </Link>
+                                )}
+                                {project.github && (
+                                    <Link
+                                        href={project.github}
+                                        className="text-gray-500 hover:underline rounded-full bg-white p-1"
+                                        target="_blank"
+                                    >
+                                        <Github size={20} />
+                                    </Link>
+
+                                )}
                             </div>
                         </motion.div>
                     ))}

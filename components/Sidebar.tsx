@@ -1,10 +1,11 @@
 "use client";
-import { Home, User, Code, Mail, GraduationCap } from "lucide-react";
+import { Home, User, Code, Mail, Computer, GraduationCap } from "lucide-react";
 import useActiveSection from "@/hooks/useActiveSection";
 
 const sections = [
     { href: "#hero", icon: Home, id: "hero", label: "Home" },
     { href: "#about", icon: User, id: "about", label: "About" },
+    { href: "#experience", icon: Computer, id: "experience", label: "Experience" },
     { href: "#education", icon: GraduationCap, id: "education", label: "Education" },
     { href: "#projects", icon: Code, id: "projects", label: "Projects" },
     { href: "#contact", icon: Mail, id: "contact", label: "Contact" },
@@ -28,6 +29,7 @@ export default function Sidebar() {
                             : "text-gray-300 hover:text-blue-400"
                             }`}
                         aria-label={section.label}
+                        title={section.label}
                     >
                         <Icon size={20} />
                     </a>

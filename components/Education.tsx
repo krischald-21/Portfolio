@@ -29,7 +29,7 @@ export default function Education() {
                             <p className="text-sm text-gray-500 dark:text-gray-400">{item.location}</p>
                             <p className="text-md mt-1">{item.degree}</p>
                             <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{item.year}</p>
-                            <div className="absolute w-3 h-3 border-2 border-blue-500 bg-gray-300 rounded-full -left-1.5 bottom-15"></div>
+                            <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-1.5 bottom-15"></div>
                         </div>
                     </div>
                 ))}
