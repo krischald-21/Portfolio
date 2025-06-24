@@ -50,7 +50,7 @@ export default function Home() {
                                 <Download size={20} className="shrink-0" /> <span>Resume</span>
                             </a>
                             <a
-                                href="/about"
+                                href="#about"
                                 className="px-6 py-2 border border-gray-400 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition"
                             >
                                 About Me
