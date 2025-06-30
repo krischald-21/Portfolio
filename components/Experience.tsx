@@ -60,7 +60,6 @@ const experience = [
 
 export default function Experience() {
     const [activeIndex, setActiveIndex] = useState<number>(0);
-    const [showTooltip, setShowTooltip] = useState<number>(0);
     const timerRef = useRef<NodeJS.Timeout | null>(null);
 
     // Auto-cycle effect
@@ -77,7 +76,6 @@ export default function Experience() {
 
     const toggleIndex = (index: number) => {
         setActiveIndex(index);
-        setShowTooltip(prev => prev + 1);
         // Reset timer on manual click
         if (timerRef.current) clearTimeout(timerRef.current);
     };
@@ -106,7 +104,6 @@ export default function Experience() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.75, delay: index * 0.2 }}
                                 onClick={() => toggleIndex(index)}
-                                title={showTooltip <= 1 ? isActive ? "Click to collapse" : "Click to expand" : ""}
                                 className={`group min-h-[25rem] max-h-[25rem] shadow-md hover:bg-gray-100 hover:dark:bg-gray-900 rounded-xs flex gap-10 p-3 items-center duration-500 transition-all ease-in-out ${isActive ? "w-[48rem] bg-gray-100 dark:bg-gray-900 px-6 cursor-default" : "w-20 cursor-pointer dark:bg-gray-600 bg-gray-200"
                                     }`}
                             >
