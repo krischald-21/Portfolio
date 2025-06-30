@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 import AnimatedSection from "./AnimatedSection";
@@ -59,12 +59,27 @@ const experience = [
 ]
 
 export default function Experience() {
-    const [activeIndex, setActiveIndex] = useState<number | null>(null);
+    const [activeIndex, setActiveIndex] = useState<number>(0);
     const [showTooltip, setShowTooltip] = useState<number>(0);
+    const timerRef = useRef<NodeJS.Timeout | null>(null);
+
+    // Auto-cycle effect
+    useEffect(() => {
+        // Clear any previous timer
+        if (timerRef.current) clearTimeout(timerRef.current);
+        timerRef.current = setTimeout(() => {
+            setActiveIndex((prev) => (prev === experience.length - 1 ? 0 : prev + 1));
+        }, 7000); // 7 seconds
+        return () => {
+            if (timerRef.current) clearTimeout(timerRef.current);
+        };
+    }, [activeIndex]);
 
     const toggleIndex = (index: number) => {
-        setActiveIndex(prev => (prev === index ? null : index));
-        setShowTooltip(prev => prev + 1)
+        setActiveIndex(index);
+        setShowTooltip(prev => prev + 1);
+        // Reset timer on manual click
+        if (timerRef.current) clearTimeout(timerRef.current);
     };
 
     return (
