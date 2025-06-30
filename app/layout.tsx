@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import DynamicCursor from "../components/DynamicCursor";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -21,7 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={poppins.variable}>
       <body className="antialiased bg-white text-black dark:bg-black dark:text-white">
-        {children}
+        <DynamicCursor />
+        <div id="app-root">
+          {children}
+        </div>
       </body>
     </html>
   );

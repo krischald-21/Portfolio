@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
-html {
+html,
+body {
     scroll-behavior: smooth;
+    cursor: none;
 }
+
+a,
+button,
+[role=button] {
+    cursor: none;
+}
+
+/*
+  Note: To achieve a 'negative' (invert) effect through the transparent part of the cursor,
+  you would need a dynamic cursor using a React component and CSS blend modes or filters.
+  This is not possible with a static SVG cursor due to browser limitations.
+*/
